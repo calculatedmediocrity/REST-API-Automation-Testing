@@ -1,15 +1,13 @@
 # REST-API-Automation-Testing
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
 Данный репозиторий содержит проект из курса "Автоматизация тестирования REST API на Python".
 
 - Ссылка на курс: https://software-testing.ru/edu/3-online/321-rest-api-python
 - API: https://playground.learnqa.ru/api/
 
-> Полное описание заданий находится в файле ***full task description.***
-
 ## Описание задач:
+
+> Полное описание заданий находится в файле ***full task description.***
 
 ### API requests
 

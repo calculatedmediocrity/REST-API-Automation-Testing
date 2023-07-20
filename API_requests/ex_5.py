@@ -25,10 +25,12 @@ passwords = [
     'princess',
     'dragon',
     'password1',
-    '123qwe']
+    '123qwe'
+]
+
 url = "https://playground.learnqa.ru/api/"
 correct_login = "super_admin"
-correct_password = 'not know'
+correct_password = ''
 for password in passwords:
 
     response = requests.post(

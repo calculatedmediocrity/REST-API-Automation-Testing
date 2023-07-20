@@ -1,0 +1,256 @@
+
+-----
+Test:Tests/test_auth.py::TestApi::test_positive_auth (setup)
+Time: 2023-07-20 12:53:12.888004
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'testaa@example.com', 'password': 'secret_Password1'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:24 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=764effae2ba68f3ea51bca6709a3b7aa23742f071389eeaa85224ada991c96c7', 'x-csrf-token': '09cd7708762652ff5eb3c5eb75430fa984727f7a23742f071389eeaa85224ada991c96c7', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:24 GMT'}
+Response cookies: {'auth_sid': '764effae2ba68f3ea51bca6709a3b7aa23742f071389eeaa85224ada991c96c7'}
+
+-----
+
+-----
+Test:Tests/test_auth.py::TestApi::test_positive_auth (call)
+Time: 2023-07-20 12:53:13.040010
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/auth
+Request data: None
+Request headers: {'x-csrf-token': '09cd7708762652ff5eb3c5eb75430fa984727f7a23742f071389eeaa85224ada991c96c7'}
+Request cookies: {'auth_sid': '764effae2ba68f3ea51bca6709a3b7aa23742f071389eeaa85224ada991c96c7'}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:24 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:24 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_auth.py::TestApi::test_negative_auth[no_cookie] (setup)
+Time: 2023-07-20 12:53:13.227164
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'testaa@example.com', 'password': 'secret_Password1'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=a80f52ce728438bdd7b91916d16f153d23742f071389eeaa85224ada991c96c7', 'x-csrf-token': '7282a20aee0026cab0e220a52858b0d081d4f82d23742f071389eeaa85224ada991c96c7', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT'}
+Response cookies: {'auth_sid': 'a80f52ce728438bdd7b91916d16f153d23742f071389eeaa85224ada991c96c7'}
+
+-----
+
+-----
+Test:Tests/test_auth.py::TestApi::test_negative_auth[no_cookie] (call)
+Time: 2023-07-20 12:53:13.286961
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/auth
+Request data: None
+Request headers: {'x-csrf-token': '7282a20aee0026cab0e220a52858b0d081d4f82d23742f071389eeaa85224ada991c96c7'}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":0}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '13', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_auth.py::TestApi::test_negative_auth[no_token] (setup)
+Time: 2023-07-20 12:53:13.462695
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'testaa@example.com', 'password': 'secret_Password1'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=a80f52ce728438bdd7b91916d16f153d23742f071389eeaa85224ada991c96c7', 'x-csrf-token': '3bd111b0e3e3f20703286232f841a70c68b4041123742f071389eeaa85224ada991c96c7', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT'}
+Response cookies: {'auth_sid': 'a80f52ce728438bdd7b91916d16f153d23742f071389eeaa85224ada991c96c7'}
+
+-----
+
+-----
+Test:Tests/test_auth.py::TestApi::test_negative_auth[no_token] (call)
+Time: 2023-07-20 12:53:13.523142
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/auth
+Request data: None
+Request headers: {}
+Request cookies: {'auth_sid': 'a80f52ce728438bdd7b91916d16f153d23742f071389eeaa85224ada991c96c7'}
+
+Response code: 200
+Response text: {"user_id":0}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '13', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_get.py::TestUserGet::test_user_get_info_not_auth (setup)
+Time: 2023-07-20 12:53:13.674253
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'testaa@example.com', 'password': 'secret_Password1'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=d40f796f588be54fef3c3910345e456a23742f071389eeaa85224ada991c96c7', 'x-csrf-token': '234d3e4e5aac8e720edee8e7090bf2a048e3980323742f071389eeaa85224ada991c96c7', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT'}
+Response cookies: {'auth_sid': 'd40f796f588be54fef3c3910345e456a23742f071389eeaa85224ada991c96c7'}
+
+-----
+
+-----
+Test:Tests/test_user_get.py::TestUserGet::test_user_get_info_not_auth (call)
+Time: 2023-07-20 12:53:13.756095
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/2
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"username":"Vitaliy"}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:26 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Vary': 'Accept-Encoding', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:25 GMT', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_get.py::TestUserGet::test_user_get_info_auth_as_same_user (setup)
+Time: 2023-07-20 12:53:14.422338
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'testaa@example.com', 'password': 'secret_Password1'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":75880}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:26 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=6f9f85bfd872f99ff2dc60a49263f50f23742f071389eeaa85224ada991c96c7', 'x-csrf-token': 'c0a5d638909f07fd856d54d032d4203b1b44db7623742f071389eeaa85224ada991c96c7', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:26 GMT'}
+Response cookies: {'auth_sid': '6f9f85bfd872f99ff2dc60a49263f50f23742f071389eeaa85224ada991c96c7'}
+
+-----
+
+-----
+Test:Tests/test_user_get.py::TestUserGet::test_user_get_info_auth_as_same_user (call)
+Time: 2023-07-20 12:53:14.499342
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/75880
+Request data: None
+Request headers: {'x-csrf-token': 'c0a5d638909f07fd856d54d032d4203b1b44db7623742f071389eeaa85224ada991c96c7'}
+Request cookies: {'auth_sid': '6f9f85bfd872f99ff2dc60a49263f50f23742f071389eeaa85224ada991c96c7'}
+
+Response code: 200
+Response text: {"id":"75880","username":"test_username1","email":"testaa@example.com","firstName":"First name","lastName":"Last name"}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:26 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Vary': 'Accept-Encoding', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:26 GMT', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_register.py::TestUserRegister::test_create_user_successfully (call)
+Time: 2023-07-20 12:53:15.195329
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user
+Request data: {'username': 'test_username', 'firstName': 'First name', 'lastName': 'Last name', 'email': 'test07202023125315@example.com', 'password': 'secret_Password1!'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"76109"}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:27 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:27 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_register.py::TestUserRegister::test_create_user_with_existing_email (call)
+Time: 2023-07-20 12:53:15.836341
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user
+Request data: {'username': 'test_username', 'firstName': 'First name', 'lastName': 'Last name', 'email': 'testaa@example.com', 'password': 'secret_Password1!'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: Users with email 'testaa@example.com' already exists
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:28 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '52', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_update.py::TestUserEdit::test_edit_just_created_user (call)
+Time: 2023-07-20 12:53:16.462334
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user
+Request data: {'username': 'test_username', 'firstName': 'First name', 'lastName': 'Last name', 'email': 'test07202023125316@example.com', 'password': 'secret_Password1!'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"76110"}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:28 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:28 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_update.py::TestUserEdit::test_edit_just_created_user (call)
+Time: 2023-07-20 12:53:17.061382
+Request method: POST
+Request URL: https://playground.learnqa.ru/api/user/login
+Request data: {'email': 'test07202023125316@example.com', 'password': 'secret_Password1!'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":76110}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:28 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=66b8042634390da2518296834ca5aba97cdafbdee492e9d562a460343cf3ea82', 'x-csrf-token': '32a3e60580fe50929eaa11c655b4748476e8cabe7cdafbdee492e9d562a460343cf3ea82', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:28 GMT'}
+Response cookies: {'auth_sid': '66b8042634390da2518296834ca5aba97cdafbdee492e9d562a460343cf3ea82'}
+
+-----
+
+-----
+Test:Tests/test_user_update.py::TestUserEdit::test_edit_just_created_user (call)
+Time: 2023-07-20 12:53:17.145384
+Request method: PUT
+Request URL: https://playground.learnqa.ru/api/user/76110
+Request data: {'firstName': 'edited_name'}
+Request headers: {'x-csrf-token': '32a3e60580fe50929eaa11c655b4748476e8cabe7cdafbdee492e9d562a460343cf3ea82'}
+Request cookies: {'auth_sid': '66b8042634390da2518296834ca5aba97cdafbdee492e9d562a460343cf3ea82'}
+
+Response code: 200
+Response text: 
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:29 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:29 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test:Tests/test_user_update.py::TestUserEdit::test_edit_just_created_user (call)
+Time: 2023-07-20 12:53:17.896386
+Request method: GET
+Request URL: https://playground.learnqa.ru/api/user/76110
+Request data: None
+Request headers: {'x-csrf-token': '32a3e60580fe50929eaa11c655b4748476e8cabe7cdafbdee492e9d562a460343cf3ea82'}
+Request cookies: {'auth_sid': '66b8042634390da2518296834ca5aba97cdafbdee492e9d562a460343cf3ea82'}
+
+Response code: 200
+Response text: {"id":"76110","username":"test_username","email":"test07202023125316@example.com","firstName":"edited_name","lastName":"Last name"}
+Response header: {'Date': 'Thu, 20 Jul 2023 09:53:30 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Vary': 'Accept-Encoding', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Thu, 20 Jul 2023 09:53:29 GMT', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+-----
